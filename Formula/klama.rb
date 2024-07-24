@@ -5,20 +5,20 @@
 class Klama < Formula
   desc "AI-powered CLI assistant for troubleshooting DevOps-related issues."
   homepage "https://github.com/eliran89c/klama"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/eliran89c/klama/releases/download/v0.1.0/klama_Darwin_x86_64.tar.gz"
-      sha256 "19e02f5b2059e6c69923ea114d6d4e080f1b01f04064add2d551415899c685e2"
+      url "https://github.com/eliran89c/klama/releases/download/v0.1.1/klama_Darwin_x86_64.tar.gz"
+      sha256 "51e1b4d260ef8e04e67c8175cbbf3257d7f410d9573359dd802b3478258ba8a8"
 
       def install
         bin.install "klama"
       end
     end
     on_arm do
-      url "https://github.com/eliran89c/klama/releases/download/v0.1.0/klama_Darwin_arm64.tar.gz"
-      sha256 "ce7529857449f9cce5e8c54bd7f999840ed4fde555fa9a50464f5b5b1a74fa68"
+      url "https://github.com/eliran89c/klama/releases/download/v0.1.1/klama_Darwin_arm64.tar.gz"
+      sha256 "f01e8170689e8926648ad1e024382b788cc503a2f236b7f0ed5c3d6d32ae295e"
 
       def install
         bin.install "klama"
@@ -29,8 +29,8 @@ class Klama < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/eliran89c/klama/releases/download/v0.1.0/klama_Linux_x86_64.tar.gz"
-        sha256 "3c1e2fabc5a0361155ea2bf2c2bcc9bce08c73280b30997b1e92d73b5c70fedb"
+        url "https://github.com/eliran89c/klama/releases/download/v0.1.1/klama_Linux_x86_64.tar.gz"
+        sha256 "56505b7b10222e05da456b8e3f69512c44221bbbb1e28bada04e17d583826a79"
 
         def install
           bin.install "klama"
@@ -39,8 +39,8 @@ class Klama < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/eliran89c/klama/releases/download/v0.1.0/klama_Linux_arm64.tar.gz"
-        sha256 "51588307e882f3a1fdc5f83c825bc2d5e51aa1024e5976daacc3bf19b0eeb5c3"
+        url "https://github.com/eliran89c/klama/releases/download/v0.1.1/klama_Linux_arm64.tar.gz"
+        sha256 "0f6c0f0b73b8b24b802802af6792bb2df7a7626c492d6062af68ca21d859cc04"
 
         def install
           bin.install "klama"

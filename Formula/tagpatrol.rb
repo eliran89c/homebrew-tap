@@ -5,20 +5,20 @@
 class Tagpatrol < Formula
   desc "Validate cloud resource tags against a defined policy."
   homepage "https://github.com/eliran89c/tag-patrol"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eliran89c/tag-patrol/releases/download/v0.1.0/tag-patrol_Darwin_x86_64.tar.gz"
-      sha256 "f4090e3174d330259d272da06c4970a48bd1c6b5002fad085b51e86b991e4ad1"
+      url "https://github.com/eliran89c/tag-patrol/releases/download/v0.2.0/tag-patrol_Darwin_x86_64.tar.gz"
+      sha256 "ff873c13b42b86d9a8dc309fb6fb719a418cf6f68a1890a8ba80eb878d3a827e"
 
       def install
         bin.install "tagpatrol"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eliran89c/tag-patrol/releases/download/v0.1.0/tag-patrol_Darwin_arm64.tar.gz"
-      sha256 "87222bc1141470ef47e9bf7c58d5e2a17f7b437a07f92c9a45726d7c771ef8c3"
+      url "https://github.com/eliran89c/tag-patrol/releases/download/v0.2.0/tag-patrol_Darwin_arm64.tar.gz"
+      sha256 "f25b4ba7bd0689e466dff7242495005f9eb5073106b563a16c5ebf6aa5093d40"
 
       def install
         bin.install "tagpatrol"
@@ -27,24 +27,18 @@ class Tagpatrol < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/eliran89c/tag-patrol/releases/download/v0.1.0/tag-patrol_Linux_x86_64.tar.gz"
-        sha256 "538e865f7358c8f78342c8e8a270efc162087060ec760ba923cf242f87b75842"
-
-        def install
-          bin.install "tagpatrol"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/eliran89c/tag-patrol/releases/download/v0.2.0/tag-patrol_Linux_x86_64.tar.gz"
+      sha256 "c601b3a8d28f28f1a4e726e49f6481324920095ecdfd2cf478c07cf33d005db1"
+      def install
+        bin.install "tagpatrol"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/eliran89c/tag-patrol/releases/download/v0.1.0/tag-patrol_Linux_arm64.tar.gz"
-        sha256 "9641fd4338a52df2b91d7df4c13f6f861524df2400cc74f88b4af7b5973c7db4"
-
-        def install
-          bin.install "tagpatrol"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/eliran89c/tag-patrol/releases/download/v0.2.0/tag-patrol_Linux_arm64.tar.gz"
+      sha256 "7a42e19d3d94a62c8e50a52964798d6cb9e72a77a8cb7f71ab634b219720f3e7"
+      def install
+        bin.install "tagpatrol"
       end
     end
   end

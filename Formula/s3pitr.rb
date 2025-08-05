@@ -5,20 +5,20 @@
 class S3pitr < Formula
   desc "A simple CLI tool to generate S3 bucket inventory reports."
   homepage "https://github.com/eliran89c/s3pitr"
-  version "1.1"
+  version "1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eliran89c/s3pitr/releases/download/v1.1/s3pitr_Darwin_x86_64.tar.gz"
-      sha256 "eb72d1772b27a61e465eebaa61ac28afc0c41f1a31632fbe54cb71c0d403259b"
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Darwin_x86_64.tar.gz"
+      sha256 "a9edd626c6e7ecb47f79323ebd68c9306781a445b2691c2c8ccdf801ee9cc2a8"
 
       def install
         bin.install "s3pitr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eliran89c/s3pitr/releases/download/v1.1/s3pitr_Darwin_arm64.tar.gz"
-      sha256 "c6d94984f87a400d5efa588386b569a078ad6f68da20a51db93e1ec7dedcc66e"
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Darwin_arm64.tar.gz"
+      sha256 "f3c5fc88becf4e416f45f7880da64872ae3d9150151852fa9286fc645ffc5f2f"
 
       def install
         bin.install "s3pitr"
@@ -27,24 +27,18 @@ class S3pitr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/eliran89c/s3pitr/releases/download/v1.1/s3pitr_Linux_x86_64.tar.gz"
-        sha256 "c5ed3c17ead697b344f704fe75975af64107980322d25663419bfad1b7a39b7a"
-
-        def install
-          bin.install "s3pitr"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Linux_x86_64.tar.gz"
+      sha256 "d42cd73615479d2742c9d13e9439356cdc140f62aadc5b75860a44066fadafc1"
+      def install
+        bin.install "s3pitr"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/eliran89c/s3pitr/releases/download/v1.1/s3pitr_Linux_arm64.tar.gz"
-        sha256 "1bcff6687e0735358f48aac875f9a62e28606431b2ef1c638cbd6bf5cddd5790"
-
-        def install
-          bin.install "s3pitr"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Linux_arm64.tar.gz"
+      sha256 "140f155b9d0486340ea2b3e829bdd8cfec8731ccd2a302f4d2f698c0490df8c1"
+      def install
+        bin.install "s3pitr"
       end
     end
   end

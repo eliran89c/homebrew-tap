@@ -5,20 +5,20 @@
 class S3pitr < Formula
   desc "A simple CLI tool to generate S3 bucket inventory reports."
   homepage "https://github.com/eliran89c/s3pitr"
-  version "1.2"
+  version "1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Darwin_x86_64.tar.gz"
-      sha256 "a9edd626c6e7ecb47f79323ebd68c9306781a445b2691c2c8ccdf801ee9cc2a8"
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.3/s3pitr_Darwin_x86_64.tar.gz"
+      sha256 "32621b477d2f94ee2db9349a3b4c8168a26d2f608b5187c37f7de03d697ab651"
 
       def install
         bin.install "s3pitr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Darwin_arm64.tar.gz"
-      sha256 "f3c5fc88becf4e416f45f7880da64872ae3d9150151852fa9286fc645ffc5f2f"
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.3/s3pitr_Darwin_arm64.tar.gz"
+      sha256 "ab9c6ceae6b0cd59b585a759c799852f8341f75e5e80b903ef1f34657eb301ae"
 
       def install
         bin.install "s3pitr"
@@ -28,15 +28,15 @@ class S3pitr < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Linux_x86_64.tar.gz"
-      sha256 "d42cd73615479d2742c9d13e9439356cdc140f62aadc5b75860a44066fadafc1"
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.3/s3pitr_Linux_x86_64.tar.gz"
+      sha256 "d5754fd090e6ad3da2a91e7e8be0c7d0b6e3941ed4978485951b0b48e39423a4"
       def install
         bin.install "s3pitr"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/eliran89c/s3pitr/releases/download/v1.2/s3pitr_Linux_arm64.tar.gz"
-      sha256 "140f155b9d0486340ea2b3e829bdd8cfec8731ccd2a302f4d2f698c0490df8c1"
+      url "https://github.com/eliran89c/s3pitr/releases/download/v1.3/s3pitr_Linux_arm64.tar.gz"
+      sha256 "14f1680dab371f20170faf69a7af8338e344e1e04f4bf23ea52222e297be3607"
       def install
         bin.install "s3pitr"
       end

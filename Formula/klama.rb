@@ -5,20 +5,20 @@
 class Klama < Formula
   desc "AI-powered CLI assistant for troubleshooting DevOps-related issues."
   homepage "https://github.com/eliran89c/klama"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eliran89c/klama/releases/download/v0.1.3/klama_Darwin_x86_64.tar.gz"
-      sha256 "1e2233852145d60259314c373e561ffb228fc390dd90aea931243653b2a8f55b"
+      url "https://github.com/eliran89c/klama/releases/download/v0.1.4/klama_Darwin_x86_64.tar.gz"
+      sha256 "dcc40d73e017a6e13b222d1c618fb39059d22c865e4a838fcd4f5a9b7b9e6b3e"
 
       def install
         bin.install "klama"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eliran89c/klama/releases/download/v0.1.3/klama_Darwin_arm64.tar.gz"
-      sha256 "171c14368930cadcf9974b02acbd37ad9d75fdc0702c3c5e3937d2a3b5e38e81"
+      url "https://github.com/eliran89c/klama/releases/download/v0.1.4/klama_Darwin_arm64.tar.gz"
+      sha256 "37e6fd399da7cb3196cc88dd54dee6603219733013bf4d733e7b295b510e0ad6"
 
       def install
         bin.install "klama"
@@ -27,16 +27,16 @@ class Klama < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/eliran89c/klama/releases/download/v0.1.3/klama_Linux_x86_64.tar.gz"
-      sha256 "3f184ffcaf0561fbbfc9455e060ebc0c3379598fba021c5ba92cc9d5a9d9f222"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/eliran89c/klama/releases/download/v0.1.4/klama_Linux_x86_64.tar.gz"
+      sha256 "7c17b911925f853051d5660541dbcbd6b71f45f418f0a7f30b81fb5ce66fca55"
       def install
         bin.install "klama"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/eliran89c/klama/releases/download/v0.1.3/klama_Linux_arm64.tar.gz"
-      sha256 "efb591b8d5087d8cb23f02250d27a17bac835959a3716197ec578476b7112d24"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/eliran89c/klama/releases/download/v0.1.4/klama_Linux_arm64.tar.gz"
+      sha256 "c7cd549d7599c33945c4dca4d5d902cd8413a0f3153f531508ebc3b865f1bd9e"
       def install
         bin.install "klama"
       end
